@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use App\Lib\ShortenUrl;
+use App\Lib\Smartphone;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -26,5 +27,7 @@ class AppServiceProvider extends ServiceProvider
     {
         // Auto binding
         $this->app->bind('ShortenUrl',ShortenUrl::class );
+
+        $this->app->bind('Smartphone',Smartphone::class );
     }
 }

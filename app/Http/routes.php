@@ -19,3 +19,7 @@ Route::get('/', function () {
 Route::get('/shorten', function() {
     dd(app()->make('ShortenUrl',['http://google.com/']));
 });
+
+Route::get('/phone', function() {
+    dd(app()->make('Smartphone'));
+});
